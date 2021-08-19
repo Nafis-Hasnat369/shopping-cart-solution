@@ -8,7 +8,7 @@ function updateProductNumber(product, price, isIncreasing) {
         productNumber = productNumber - 1;
     };
     productInput.value = productNumber;
-    // update case total 
+    // update total
     const productTotal = document.getElementById(product + "-total");
     productTotal.innerText = productNumber * price;
     // calculate total
@@ -28,15 +28,13 @@ function calculateTotal() {
     document.getElementById("sub-total").innerText = subTotal;
     document.getElementById("tax-amount").innerText = tax;
     document.getElementById("total-price").innerText = subTotal + tax;
-};
-// handle phone increase decrease events
+}
 document.getElementById("phone-plus").addEventListener("click", function () {
     updateProductNumber("phone", 1219, true);
 });
 document.getElementById("phone-minus").addEventListener("click", function () {
     updateProductNumber("phone", 1219, false);
 });
-// handle case increase decrease events
 document.getElementById("case-plus").addEventListener("click", function () {
     updateProductNumber("case", 59, true);
 });
